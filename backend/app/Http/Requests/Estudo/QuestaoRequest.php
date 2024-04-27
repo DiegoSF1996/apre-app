@@ -28,7 +28,11 @@ class QuestaoRequest extends FormRequest
 
 	public function store()
 	{
-		return [];
+		return [
+			"descricao" => ["required", "max:255"],
+			"assunto_id" => ["required", "exists:assunto,id"],
+			"tags" => ["nullable", "max:100"],
+		];
 	}
 
 	public function update()
@@ -43,7 +47,13 @@ class QuestaoRequest extends FormRequest
 
 	public function messages()
 	{
-		return [];
+		return [
+			"descricao.required" => "O campo descrição é obrigatório.",
+			"descricao.max" => "O campo descrição deve ter no máximo 255 caracteres.",
+			"assunto_id.required" => "O campo assunto é obrigatório.",
+			"assunto_id.exists" => "O campo assunto é inválido.",
+			"tags.max" => "O campo tags deve ter no máximo 100 caracteres.",
+		];
 	}
 
 	protected function failedValidation(Validator $validator)
