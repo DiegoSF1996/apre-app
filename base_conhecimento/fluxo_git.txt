@@ -1,0 +1,23 @@
+1 - Criar sua branch, caso ainda não tenha:
+	git checkout develop
+	git pull
+	git checkout -b nome_da_sua_branch 
+	
+2 - Antes de começar a codificação (quando vc já tem sua branch):
+
+	git checkout develop 
+	git pull 
+	git checkout nome_da_sua_branch 
+	git merge --no-ff develop
+	
+3 - Depois que terminar de codificar:
+
+	git commit -m "escreva oq vc fez"
+	git push
+	git checkout develop
+	git pull 
+	git chckout nome_da_sua_branch
+	git merge --no-ff develop
+	git push 
+	git checkout develop 
+	git merge --no-ff nome_da_sua_branch 
