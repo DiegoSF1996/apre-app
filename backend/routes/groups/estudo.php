@@ -11,4 +11,4 @@ Route::apiResource('questaos', App\Http\Controllers\Estudo\QuestaoController::cl
 
 Route::apiResource('respostas', App\Http\Controllers\Estudo\RespostaController::class)->parameters(['respostas' => 'id']);
 
-Route::apiResource('respostausers', App\Http\Controllers\estudo\RespostaUserController::class)->parameters(['respostausers' => 'id']);
+Route::apiResource('respostausers', App\Http\Controllers\Estudo\RespostaUserController::class)->parameters(['respostausers' => 'id']);
