@@ -1,0 +1,13 @@
+<?php
+
+namespace App\Models\{{folderName}};
+
+use App\Models\ModelGenerico;
+
+class {{modelName}} extends ModelGenerico
+{
+    protected $table = '{{tableName}}';         
+    protected $guarded = ['id'];
+    protected $dates = ['created_at','updated_at'];
+    protected $fillable = [{{fillable}}];
+}
